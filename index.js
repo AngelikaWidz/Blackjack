@@ -7,10 +7,9 @@ let secondCard = Math.floor(Math.random() * 12) + 2
 let total = firstCard + secondCard;
 
 // if .. else statement which looks at the total, and then decides which codeblock to run depending on the sum of 2 cards compared to 21
-if (total < 21) {
+// using ternary operator
+total < 21?
     console.log(total + " congrats, draw a new card?")
-} else if (total > 21) {
-    console.log(total + " Bust!")
-} else if (total === 21) {
+: total === 21?
     console.log(total + " Winner!")
-}
+: (console.log(total + " Bust"));
